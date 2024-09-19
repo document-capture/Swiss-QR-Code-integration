@@ -219,8 +219,7 @@ Word: Text[1024]): Boolean
                 //ValidQRBillCodeFound += 1;
                 if SwissQRBillDecode.DecodeQRCodeText(CurrentSwissQRBillBuffer, QRBillContent) then begin
                     if IsNewQRBillCode(TempSwissQRBillBuffer, CurrentSwissQRBillBuffer) then begin
-                        if ValidQRBillCodeFound > 0 then
-                            ValidQRBillCodeFound += 1;
+                        ValidQRBillCodeFound += 1;
 
                         TempSwissQRBillBuffer.Init();
                         TempSwissQRBillBuffer."Entry No." := ValidQRBillCodeFound;
